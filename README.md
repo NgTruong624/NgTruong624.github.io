@@ -1,1 +1,1 @@
-# NgTruong624.github.io
+# This landing page in use to introduce myself

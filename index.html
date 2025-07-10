@@ -15,6 +15,9 @@
     <header class="header">
         <div class="container">
             <h1 class="name">Tran Vo Ngoc Truong</h1>
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+            </button>
             <nav class="nav">
                 <ul class="nav-list">
                     <li><a href="#about" class="nav-link">Giới thiệu</a></li>
@@ -124,5 +127,22 @@
             <p class="footer-text">© 2025 Tran Vo Ngoc Truong</p>
         </div>
     </footer>
+
+    <script>
+        const navToggle = document.querySelector('.nav-toggle');
+        const nav = document.querySelector('.nav');
+
+        navToggle.addEventListener('click', () => {
+            const isVisible = nav.classList.toggle('nav--visible');
+            document.body.style.overflow = isVisible ? 'hidden' : 'auto';
+        });
+
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('nav--visible');
+                document.body.style.overflow = 'auto';
+            });
+        });
+    </script>
 </body>
 </html>
