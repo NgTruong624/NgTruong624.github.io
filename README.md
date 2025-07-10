@@ -1,1 +1,1 @@
-# This landing page in use to introduce myself
+# This landing page is for introducing myself
